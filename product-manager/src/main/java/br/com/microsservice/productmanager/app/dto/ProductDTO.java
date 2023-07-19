@@ -23,6 +23,8 @@ public class ProductDTO {
     private double price;
 
     private boolean available;
+    
+    public ProductDTO() {}
 
     public ProductDTO(String name, String description, double price, boolean available) {
         this.name = name;
@@ -31,18 +33,15 @@ public class ProductDTO {
         this.available = available;
     }
 
-    public Product toProduct() {
-        return new Product(this.name, this.description, this.price, isAvailable());
+    public ProductDTO(Product product) {
+        this.id = product.getId();
+        this.name = product.getName();
+        this.description = product.getDescription();
+        this.price = product.getPrice();
+        this.available = product.isAvailable();
     }
 
-    public static ProductDTO toDto(Product product) {
-        ProductDTO productDto = new ProductDTO(
-                product.getName(),
-                product.getDescription(),
-                product.getPrice(),
-                product.isAvailable()
-            );
-        productDto.setId(product.getId());
-        return productDto;
+    public Product toProduct() {
+        return new Product(this.name, this.description, this.price, isAvailable());
     }
 }

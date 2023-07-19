@@ -23,7 +23,7 @@ public class ProductService implements ProductServiceInterface {
     private List<ProductDTO> toDTOList(List<Product> productList) {
         List<ProductDTO> productDTOList = new ArrayList<>();
         for(Product product : productList) {
-            productDTOList.add(ProductDTO.toDto(product));
+            productDTOList.add(new ProductDTO(product));
         }
         return productDTOList;
     }
@@ -50,7 +50,7 @@ public class ProductService implements ProductServiceInterface {
     @Override
     public Optional<ProductDTO> readById(Long id) {
         Optional<Product> searchedProduct = this.productRepository.findById(id);
-        return searchedProduct.map(ProductDTO::toDto);
+        return searchedProduct.map(ProductDTO::new);
     }
 
     @Override
