@@ -1,6 +1,6 @@
 package br.com.microsservice.productmanager.app.dto;
 
-import br.com.microsservice.productmanager.app.model.Product;
+import br.com.microsservice.productmanager.app.entity.Product;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.PositiveOrZero;
 import jakarta.validation.constraints.Size;

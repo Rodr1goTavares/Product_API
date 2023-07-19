@@ -1,7 +1,7 @@
 package br.com.microsservice.productmanager.app.controller;
 
 import br.com.microsservice.productmanager.app.dto.ProductDTO;
-import br.com.microsservice.productmanager.app.model.Product;
+import br.com.microsservice.productmanager.app.entity.Product;
 import br.com.microsservice.productmanager.app.services.product.ProductService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

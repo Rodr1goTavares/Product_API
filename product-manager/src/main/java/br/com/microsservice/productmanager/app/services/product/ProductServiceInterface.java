@@ -1,7 +1,7 @@
 package br.com.microsservice.productmanager.app.services.product;
 
 import br.com.microsservice.productmanager.app.dto.ProductDTO;
-import br.com.microsservice.productmanager.app.model.Product;
+import br.com.microsservice.productmanager.app.entity.Product;
 
 import java.util.List;
 import java.util.Optional;

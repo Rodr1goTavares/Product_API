@@ -1,4 +1,4 @@
-package br.com.microsservice.productmanager.app.model;
+package br.com.microsservice.productmanager.app.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
@@ -24,7 +24,9 @@ public class Product {
 
     @Column(name = "available")
     private boolean available;
+
     public Product() {}
+
     public Product(String name, String description, double price, boolean available) {
         this.name = name;
         this.description = description;
