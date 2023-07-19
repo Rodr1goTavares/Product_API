@@ -12,6 +12,8 @@ public interface ProductServiceInterface {
 
     List<ProductDTO> read();
 
+    List<ProductDTO> readWithPagination(int page, int size);
+
     Optional<ProductDTO> readById(Long id);
 
     List<ProductDTO> update(Product product);
