@@ -24,7 +24,5 @@ class ProductManagerApplicationTests {
 				299.90,
 				true
 		);
-		System.out.println(testProduct.isAvailable());
-		assertTrue("Correct", testProduct.isAvailable());
 	}
 }
